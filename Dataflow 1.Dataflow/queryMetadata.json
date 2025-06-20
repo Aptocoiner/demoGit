@@ -1,0 +1,38 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Dataflow 1",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "DefaultDestination": {
+      "queryId": "22137d5c-e64c-4c20-a348-08cc113ca525",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Sheet1": {
+      "queryId": "9b93c020-fe19-44df-a2da-6494922b475b",
+      "queryName": "Sheet1",
+      "loadEnabled": false
+    },
+    "Sheet1_DataDestination": {
+      "queryId": "3417a9f2-42ef-499f-b878-086faba223ac",
+      "queryName": "Sheet1_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://www.dropbox.com/scl/fi/sau488ml0rbemhxbopsux/employee_data.xlsx?rlkey=bc8wzhind5g08xxa6f8zlp0eb&st=7l9kjy4s&dl=1",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"f9c7b74f-d227-4695-baf9-1b4d29312745\",\"DatasourceId\":\"e18ae0fa-99dd-4ec9-a407-7d420dc2b27c\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"f9c7b74f-d227-4695-baf9-1b4d29312745\",\"DatasourceId\":\"7b3083a3-9969-44e3-b3b7-00847872d88a\"}"
+    }
+  ]
+}

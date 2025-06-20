@@ -1,0 +1,42 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Script1",
+        "type": "Script",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "linkedService": {
+          "name": "StagingWarehouseForDataflows_20250609074917",
+          "properties": {
+            "annotations": [],
+            "type": "DataWarehouse",
+            "typeProperties": {
+              "endpoint": "a2cuqgr5ukpeppo5hafacatsom-kjqeav6winkupd653df7d7clyu.datawarehouse.fabric.microsoft.com",
+              "artifactId": "b2279e74-1dfd-4b63-9e60-c85bbaa0412b",
+              "workspaceId": "57406052-43d6-4755-8fdd-d8cbf1fc4bc5"
+            }
+          }
+        },
+        "typeProperties": {
+          "scripts": [
+            {
+              "type": "Query",
+              "text": {
+                "value": "CREATE TABLE IF NOT EXISTS Staging.SalesData (\n    SaleDate DATE,\n    ProductID INT,\n    Quantity INT,\n    UnitPrice FLOAT\n);\n",
+                "type": "Expression"
+              }
+            }
+          ],
+          "scriptBlockExecutionTimeout": "02:00:00"
+        }
+      }
+    ]
+  }
+}
